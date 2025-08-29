@@ -1,0 +1,57 @@
+matrix  composition low 
+### The setup
+
+* $A \in M_{m\times n}(F)$, $B \in M_{n\times p}(F)$.
+* $L_A : F^n \to F^m$, defined by $L_A(x)=Ax$.
+* $L_B : F^p \to F^n$, defined by $L_B(x)=Bx$.
+
+We want to show:
+
+$$
+L_A \circ L_B = L_{AB}.
+$$
+
+---
+
+### Step 1. What does the composition mean?
+
+For $x\in F^p$:
+
+$$
+(L_A \circ L_B)(x) = L_A\big(L_B(x)\big).
+$$
+
+---
+
+### Step 2. Plug in the definitions
+
+* $L_B(x) = Bx \in F^n$.
+* Then $L_A(L_B(x)) = L_A(Bx) = A(Bx).$
+
+---
+
+### Step 3. Associativity of matrix multiplication
+
+By associativity,
+
+$$
+A(Bx) = (AB)x.
+$$
+
+---
+
+### Step 4. Identify the new linear map
+
+That’s exactly the action of $L_{AB}$ on $x$:
+
+$$
+(AB)x = L_{AB}(x).
+$$
+
+---
+
+✅ Conclusion:
+
+$$
+L_A \circ L_B = L_{AB}.
+$$
