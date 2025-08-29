@@ -1,4 +1,4 @@
-matrix  composition low 
+matrix multiplication definition 
 ### The setup
 
 * $A \in M_{m\times n}(F)$, $B \in M_{n\times p}(F)$.
