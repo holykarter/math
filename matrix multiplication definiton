@@ -1,7 +1,7 @@
 matrix multiplication definition 
 ### The setup
 
-* $A \in M_{m\times n}(F)$, $B \in M_{n\times p}(F)$.
+* $A \in M_{m\times n}(F)$, $B \in M_{n\times p}(F)$. 
 * $L_A : F^n \to F^m$, defined by $L_A(x)=Ax$.
 * $L_B : F^p \to F^n$, defined by $L_B(x)=Bx$.
 
