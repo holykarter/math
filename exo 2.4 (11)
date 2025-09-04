@@ -1,0 +1,42 @@
+# write a rigourouse proof 
+
+### The Corrected Proof
+
+Here is the corrected logical flow.
+
+---
+
+## What the Premise Tells Us
+
+The premise is that Ax = 0 has a nonzero solution.
+
+* This means the nullspace of A is non-trivial.
+* For a matrix A with n columns, this occurs only when the columns are linearly dependent.
+* This directly implies that the rank of the matrix is less than the number of columns.
+    rank(A) < n
+
+---
+
+## What Would Be Required for a Solution to Always Exist
+
+Now, consider the system: Aᵀy = f.
+
+* For this system to be solvable for every possible vector f, the columns of Aᵀ must span the entire target space.
+* If A is an m x n matrix, then Aᵀ is n x m. The vector f is in Rⁿ.
+* For the columns of Aᵀ to span all of Rⁿ, their dimension (the rank) must be n. The condition would be:
+    rank(Aᵀ) = n
+
+---
+
+## The Contradiction
+
+Now we can see the conflict.
+
+* From the premise, we proved that rank(A) < n.
+* We know for a fact that rank(A) = rank(Aᵀ).
+* Combining these, we get rank(Aᵀ) < n.
+
+This directly contradicts the condition required for Aᵀy = f to always have a solution (rank(Aᵀ) = n).
+
+Since the rank is less than n, the column space of Aᵀ is just a subspace of Rⁿ and does not fill it entirely. 
+Therefore, there must be vectors f outside of this subspace for which the equation has no solution.
