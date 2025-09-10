@@ -1,4 +1,4 @@
-Here’s the refined list of the **most important projects** I pulled out from your big list 👇
+theorem : the spectral theorem
 
 ---z
 
