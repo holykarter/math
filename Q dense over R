@@ -1,0 +1,58 @@
+To present the **Archimedean Property** (often called the Archimedean Axiom) with full mathematical rigor, we must transition from a "ruler" analogy to the formal language of **Real Analysis**.
+
+The property relies on the **Least Upper Bound Property** (Completeness Axiom) of the real numbers.
+
+---
+
+## 1. The Statement
+Formally, the Archimedean Property can be stated in several equivalent ways. The most common version is:
+
+> **Theorem:** If $x \in \mathbb{R}$ and $y \in \mathbb{R}$ such that $x > 0$, then there exists a natural number $n \in \mathbb{N}$ such that:
+> $$nx > y$$
+
+In simpler terms, no matter how small $x$ is or how large $y$ is, adding $x$ to itself enough times will eventually exceed $y$. There are no "infinitely large" or "infinitely small" (non-zero) real numbers.
+
+---
+
+## 2. Rigorous Proof by Contradiction
+To prove this, we assume the property is **false** and show that this leads to a logical impossibility within the system of Real Numbers ($\mathbb{R}$).
+
+**1. The Assumption:**
+Suppose the property is false. This means there exist some $x, y \in \mathbb{R}$ with $x > 0$ such that for **all** $n \in \mathbb{N}$, $nx \leq y$.
+
+**2. Defining a Set:**
+Let $S$ be the set of all multiples of $x$ by natural numbers:
+$$S = \{ nx \mid n \in \mathbb{N} \}$$
+According to our assumption, $y$ is an **upper bound** for $S$ (because every element $nx$ is less than or equal to $y$).
+
+**3. Applying Completeness:**
+The **Completeness Axiom** of $\mathbb{R}$ states that every non-empty set of real numbers that is bounded above must have a **Supremum** (a Least Upper Bound). Let:
+$$\alpha = \sup(S)$$
+
+**4. The Contradiction:**
+Since $\alpha$ is the *least* upper bound, and $x > 0$, then $\alpha - x$ is **not** an upper bound for $S$ (it’s too small).
+Therefore, there must be some element $m x \in S$ such that:
+$$mx > \alpha - x$$
+
+If we add $x$ to both sides of this inequality:
+$$(m + 1)x > \alpha$$
+
+**5. The Conclusion:**
+Since $m \in \mathbb{N}$, then $(m + 1) \in \mathbb{N}$. This means $(m+1)x$ is an element of $S$.
+However, we just showed $(m+1)x > \alpha$, which contradicts the fact that $\alpha$ is the upper bound for $S$.
+**Therefore, the original assumption must be false.**
+
+
+
+---
+
+## 3. Corollaries (The "Steps" to Density)
+The rigorous density proof you asked about earlier actually uses these specific consequences of the Archimedean Property:
+
+* **Corollary A:** For any $\epsilon > 0$, there exists $n \in \mathbb{N}$ such that $\frac{1}{n} < \epsilon$.
+    *(This is the "Step Size" logic. You can make $1/n$ as small as you want by picking a large enough $n$.)*
+* **Corollary B:** For any $x \in \mathbb{R}$, there exists $n \in \mathbb{N}$ such that $n > x$.
+    *(The set of Natural Numbers is not bounded above in the Reals.)*
+
+### Summary for your "Ruler"
+When you define your ruler with resolution $e$, you are invoking Corollary A. By choosing $n$ such that $1/n < (y - x)$, you are mathematically ensuring that your "ruler marks" are close enough together to catch the gap between any two real numbers.
